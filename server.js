@@ -7,11 +7,7 @@ const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
 
-app.use(cors({
-  origin: ['https://sanalpos.onrender.com'],
-  methods: ['POST'], // sadece POST
-  allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 app.use(express.json());
 
 const iyzipay = new Iyzipay({
